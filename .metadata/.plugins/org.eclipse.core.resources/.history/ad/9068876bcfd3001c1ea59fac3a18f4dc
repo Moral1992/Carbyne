@@ -1,0 +1,25 @@
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
+
+public class MyClass {
+
+	public static List<Product> filterList(List<Product> productsList)
+	{
+        Predicate<Product> predicate = new Predicate<Product>() {
+            @Override
+            public boolean test(Product p) {
+                // filter cities that start with `N`
+                return (p->getCategory().equals("Books")) && (p->getPrice() > 100.0);
+            }
+        };
+		Stream<Product> productsStream = productsList.stream();
+		productsStream.filter(predicate).collect(Collectors.toList());
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,46 @@
+package ArrayOfStrings;
+
+import java.util.*;
+
+public class FindLongestStrings {
+
+	public static void main(String[] args)
+	{
+		
+		String []arr = { "cat", "dog", "red", "is", "elephant" };
+		 printStrings(arr);
+				
+	}
+	
+	
+	static int maxLength(String []arr)
+	{
+		Vector<String> ans = new Vector<String>();
+	    int maxChars = 0;
+	    
+	    //Done in two iterations to handle the case of more than one maximum length string without having to delete existing array 
+	    
+	    //first iteration to find max
+	    for(int i = 0; i < arr.length; i++)
+	    {	      	 
+	        if (maxChars <= arr[i].length())
+	        {
+	        	maxChars = arr[i].length();
+	        }
+	    }
+	    
+	  //second iteration to insert to list
+	    for (int i = 0; i < arr.length; i++)
+	    {
+	    	if (arr[i].length() == maxChars)
+	    	{
+	    		ans.add(arr[i]);
+	    	}
+	    }
+	 
+	    return ans;
+	}
+
+	 
+
+}
