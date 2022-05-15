@@ -18,8 +18,12 @@ public class CartViewBusiness {
 		m_cartViewPage
 		.WaitForCartSummaryToDisplay()
 		.DeleteRowByItemName(i_itemName);
-		//.WaitForRowNotDisplay(i_itemName);
 		return this;
+	}
+	
+	public void ValidateCartIsEmpty() {
+		m_cartViewPage
+		.WaitForEmptyMessage();
 	}
  
 }

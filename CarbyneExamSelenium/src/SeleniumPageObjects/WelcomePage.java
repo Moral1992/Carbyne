@@ -48,8 +48,7 @@ public class WelcomePage extends PageBase {
 	public void ClickOnAddToCartButton(String i_itemName, Boolean i_discount) {
 		WebElement item = FindItemElement(i_itemName, i_discount);
 		WaitUntilDislayed(5, m_addToCartButtonBy, item);		
-		WebElement addToCart = item.findElement(m_addToCartButtonBy);		
-		addToCart.click();
+		item.findElement(m_addToCartButtonBy).click();				
 	}
 	
 	public WelcomePage ClickOnCartViewButton() {

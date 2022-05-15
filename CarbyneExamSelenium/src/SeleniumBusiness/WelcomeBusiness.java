@@ -16,7 +16,6 @@ public class WelcomeBusiness {
 	public WelcomeBusiness AddItemToCart(String i_itemName, boolean i_discount) {		
 		m_welcomePage
 			.HoverOverItem(i_itemName, i_discount);		
-
 		m_welcomePage
 			.ClickOnAddToCartButton(i_itemName, i_discount);	
 		

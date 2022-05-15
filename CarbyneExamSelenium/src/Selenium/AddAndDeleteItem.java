@@ -43,6 +43,9 @@ class AddAndDeleteItem extends TestBase{
 
 		m_cartViewBusiness
 		.DeleteRowByItemName("Printed Summer Dress");
+		
+		m_cartViewBusiness
+		.ValidateCartIsEmpty();
 	}	
 	
 
